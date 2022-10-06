@@ -1,0 +1,39 @@
+.container{
+  background-image: url(../../assets/folMain.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 700px !important;
+}
+.container .frsth1{
+  padding-left: 450px;
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.container h1{
+  font-size: 8em;
+  font-family: 'tituloMain';
+  padding-left: 300px;
+  color: #4d475b;
+}
+.container h2{
+  color: #4d475b;
+  font-size: 1.5em;
+  padding-top: 60px;
+  padding-left: 280px;
+  font-family: 'subtituloMain';
+}
+/* .container h1::after{
+  content: '';
+  display: block;
+  width: 670px;
+  height: 2px;
+  margin-top: 15px;
+  background-color:#4d475b;
+} */
+.container button{
+  text-transform: uppercase;
+  font-family: 'subtituloMain';
+  margin-top: 20px;
+  margin-left: 530px;
+}
