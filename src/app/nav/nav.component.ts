@@ -51,8 +51,8 @@ export class NavComponent implements OnInit {
         items: [
           {
             label: 'Pesquisar',
-            icon: 'pi pi-fw pi-search',
-            routerLink: '/users'
+            icon: 'pi pi-fw pi-search'
+
           },
           {
             label: 'Remover',
@@ -73,7 +73,7 @@ export class NavComponent implements OnInit {
         icon: 'pi pi-fw pi-file',
         items: [
           {
-            label: 'Adicionar', icon: 'pi pi-fw pi-book', routerLink: '/addNoticias'
+            label: 'Adicionar', icon: 'pi pi-fw pi-book'
           },
           { label: 'Pesquisar', icon: 'pi pi-fw pi-search', routerLink: '/noticias' },
           { label: 'Atualizar', icon: 'pi pi-fw pi-pencil' },

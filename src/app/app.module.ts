@@ -13,6 +13,7 @@ import { HomeModule } from './home/home.module';
 
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import { FormEntrarComponent } from './form-entrar/form-entrar.component';
+import { NoticiaModule } from './noticia/noticia.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormEntrarComponent } from './form-entrar/form-entrar.component';
     MenubarModule,
     BrowserModule,
     NgxSmartModalModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    NoticiaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

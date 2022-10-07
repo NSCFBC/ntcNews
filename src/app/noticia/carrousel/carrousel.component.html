@@ -1,0 +1,12 @@
+<div class="keyrightLeft">
+
+  <p-carousel [value]="noticias" [autoplayInterval]="3000" [circular]="true">
+    <ng-template let-noticia pTemplate="item">
+     <div class="col-12 md:col-12 lg:col-12 sm:flex-nowrap slideConfig"
+     style="background-image: url('{{noticia.img}}')">
+     <p class="tituloParagrafo">{{noticia.msg}}</p>
+     <!-- <img alt="" src="../../../assets/img0{{noticia.src}}Slide.jpg" class="imgSlide"> -->
+   </div>
+ </ng-template>
+</p-carousel>
+</div>

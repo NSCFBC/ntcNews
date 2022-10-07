@@ -1,0 +1,37 @@
+.grid{
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.carrousel{
+  /* background-color: red; */
+  height: 400px;
+}
+.lt-nees{
+  /* background-color:rebeccapurple; */
+}
+.nt-news{
+  background-color: tomato;
+  /* margin-left : 0; */
+  margin-top: 10px;
+}
+/* .grid{
+  max-width: 1500px;
+  margin: 0 auto;
+} */
+
+.ft-news{
+  /* background-color: #caa; */
+  height: 200px;
+
+}
+.ft-news1{
+  background-color: #ffa;
+  height: 150px;
+
+}
+
+
+

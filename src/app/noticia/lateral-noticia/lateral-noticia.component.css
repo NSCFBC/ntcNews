@@ -1,0 +1,14 @@
+.imgLateral{
+  height: 190px;
+  width: 100%;
+  /* width: 100%; */
+  /* max-width: 100%; */
+  display: block;
+  padding-left: 20px;
+  /* margin-right: 20px; */
+  padding-right: 20px;
+  padding-top: 20px;
+}
+/* .imgLateral.top{ */
+ /* padding-bottom: 20px; */
+/* } */
