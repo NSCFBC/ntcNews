@@ -21,6 +21,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FormEntrarComponent } from './form-entrar/form-entrar.component';
 import { NoticiaModule } from './noticia/noticia.module';
 import { FormCadastrarComponent } from './form-cadastrar/form-cadastrar.component';
+import { HttpInterceptorModule } from './interceptor/header-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { FormCadastrarComponent } from './form-cadastrar/form-cadastrar.componen
     FormCadastrarComponent
   ],
   imports: [
+    HttpInterceptorModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
