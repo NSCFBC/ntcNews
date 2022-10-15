@@ -4,8 +4,8 @@
   min-height: calc(100% - (1.75rem * 2));
  }
  .formModal{
-  width: 350px;
-  height: 300px;
+  width: 400px;
+  height: 480px;
  }
 .formModal h1{
   text-transform: uppercase;
@@ -29,6 +29,7 @@
   display: block;
   margin: 0 auto;
   text-align: center;
+
 }
 
 .formModal label{
@@ -38,12 +39,12 @@
   letter-spacing: 0,05em;
 }
 .formModal input{
+  text-align: left;
   font-size:1.25em;
   font-family: 'texto';
   margin-top: 10px;
   width: 250px;
   height: 30px;
-  text-align: left;
 }
 .formModal button{
   text-transform: uppercase;

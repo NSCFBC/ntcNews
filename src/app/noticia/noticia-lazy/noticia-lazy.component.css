@@ -6,11 +6,11 @@
 }
 
 .carrousel{
-  /* background-color: red; */
+  background-color: red;
   height: 400px;
 }
 .lt-nees{
-  /* background-color:rebeccapurple; */
+  background-color:rebeccapurple;
 }
 .nt-news{
   background-color: tomato;
@@ -23,9 +23,8 @@
 } */
 
 .ft-news{
-  /* background-color: #caa; */
+  background-color: #caa;
   height: 200px;
-
 }
 .ft-news1{
   background-color: #ffa;

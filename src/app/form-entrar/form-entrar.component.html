@@ -1,6 +1,6 @@
 
 <ngx-smart-modal #videoModal identifier="modalEntrar" customClass="medium-modal nsm-dialog-animation-ltr nsm-centered">
-  <form class="formModal">
+  <form class="formModal" (ngSubmit)="login()" [formGroup]="formUser">
       <h1>Entrar</h1>
       <div class="ctnCadastro">
         <label for="email" class="lbCadastro tituloParagrafoReduzidoLabel">Email</label>

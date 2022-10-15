@@ -5,13 +5,10 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
-  styleUrls: ['./nav.component.css']
+  styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-
-  constructor(public ngxSmartModalService: NgxSmartModalService) {
-  }
-
+  constructor(public ngxSmartModalService: NgxSmartModalService) {}
 
   items: MenuItem[] = [];
 
@@ -20,30 +17,34 @@ export class NavComponent implements OnInit {
       {
         label: 'Home',
         icon: 'pi pi-fw pi-user',
-        routerLink: ['']
+        routerLink: [''],
       },
       {
         label: 'Noticias',
         icon: 'pi pi-fw pi-file',
         items: [
           {
-            label: 'Destaques', icon: 'pi pi-fw pi-star',
+            label: 'Destaques',
+            icon: 'pi pi-fw pi-star',
           },
           {
-            label: 'Cidade', icon: 'pi pi-fw pi-bell',
+            label: 'Cidade',
+            icon: 'pi pi-fw pi-bell',
           },
 
           {
-            label: 'Música', icon: 'pi pi-fw pi-volume-up',
+            label: 'Música',
+            icon: 'pi pi-fw pi-volume-up',
           },
           {
-            label: 'Esporte', icon: 'pi pi-fw pi-heart',
-
+            label: 'Esporte',
+            icon: 'pi pi-fw pi-heart',
           },
           {
-            label: 'Educação', icon: 'pi pi-fw pi-book',
+            label: 'Educação',
+            icon: 'pi pi-fw pi-book',
           },
-        ]
+        ],
       },
       {
         label: 'Usuário',
@@ -51,8 +52,7 @@ export class NavComponent implements OnInit {
         items: [
           {
             label: 'Pesquisar',
-            icon: 'pi pi-fw pi-search'
-
+            icon: 'pi pi-fw pi-search',
           },
           {
             label: 'Remover',
@@ -65,39 +65,45 @@ export class NavComponent implements OnInit {
           {
             label: 'Atualizar',
             icon: 'pi pi-fw pi-pencil',
-          }
-        ]
+          },
+        ],
       },
       {
         label: 'Noticia',
         icon: 'pi pi-fw pi-file',
         items: [
           {
-            label: 'Adicionar', icon: 'pi pi-fw pi-book'
+            label: 'Adicionar',
+            icon: 'pi pi-fw pi-book',
           },
-          { label: 'Pesquisar', icon: 'pi pi-fw pi-search', routerLink: '/noticias' },
+          {
+            label: 'Pesquisar',
+            icon: 'pi pi-fw pi-search',
+            routerLink: '/noticias',
+          },
           { label: 'Atualizar', icon: 'pi pi-fw pi-pencil' },
-          { label: 'Delete', icon: 'pi pi-fw pi-trash' }
-        ]
+          { label: 'Delete', icon: 'pi pi-fw pi-trash' },
+        ],
       },
       {
         label: 'Cadastrar-se',
         icon: 'pi pi-fw pi-file',
-
+        command: () => {
+          this.ngxSmartModalService.getModal('modalCadastro').open();
+        },
       },
       {
         label: 'Entrar',
         icon: 'pi pi-fw pi-user',
         command: () => {
-         this.ngxSmartModalService.getModal('modalEntrar').open();
+          this.ngxSmartModalService.getModal('modalEntrar').open();
         },
       },
       {
         label: 'Sair',
         icon: 'pi pi-fw pi-sign-out',
         routerLink: '/home',
-      }]
+      },
+    ];
   }
 }
-
-

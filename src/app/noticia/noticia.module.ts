@@ -10,8 +10,10 @@ import { CarrouselComponent } from './carrousel/carrousel.component';
 import { LateralNoticiaComponent } from './lateral-noticia/lateral-noticia.component';
 import { DownNoticiaComponent } from './down-noticia/down-noticia.component';
 import { ListNoticiaComponent } from './list-noticia/list-noticia.component';
+import { TabelaNoticiaComponent } from './tabela-noticia/tabela-noticia.component';
 
-
+import { NgxSmartModalModule } from 'ngx-smart-modal';
+import {TableModule} from 'primeng/table';
 @NgModule({
   declarations: [
     RoutingComponent,
@@ -19,9 +21,12 @@ import { ListNoticiaComponent } from './list-noticia/list-noticia.component';
     CarrouselComponent,
     LateralNoticiaComponent,
     DownNoticiaComponent,
-    ListNoticiaComponent
+    ListNoticiaComponent,
+    TabelaNoticiaComponent
   ],
   imports: [
+    TableModule,
+    NgxSmartModalModule,
     CarouselModule,
     CommonModule,
     NoticiaRoutingModule
