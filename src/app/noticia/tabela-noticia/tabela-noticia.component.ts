@@ -7,6 +7,7 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
   styleUrls: ['./tabela-noticia.component.css']
 })
 export class TabelaNoticiaComponent implements OnInit {
+
   noticias: any;
   noticia: any = [];
   showStandard: boolean = false;
@@ -33,6 +34,26 @@ export class TabelaNoticiaComponent implements OnInit {
     this.display = false;
     this.noticias = [
       {
+        caminhoImagem: 'ads',
+        dataNoticia: '2010/10/10',
+        titulo: 'asdasdasdasdas',
+        subtitulo: 'asd',
+        conteudo: 'adads',
+      },
+      {
+        caminhoImagem: 'ads',
+        dataNoticia: '2010/10/10',
+        titulo: 'asdasdasdasdas',
+        subtitulo: 'asd',
+        conteudo: 'adads',
+      },
+      {
+        caminhoImagem: 'ads',
+        dataNoticia: '2010/10/10',
+        titulo: 'asdasdasdasdas',
+        subtitulo: 'asd',
+        conteudo: 'adads',
+      }, {
         caminhoImagem: 'ads',
         dataNoticia: '2010/10/10',
         titulo: 'asdasdasdasdas',

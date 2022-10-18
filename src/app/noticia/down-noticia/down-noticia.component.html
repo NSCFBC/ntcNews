@@ -1,9 +1,10 @@
 
 <div class="dlex">
-  <div>
-    <img src="../../../assets/img01Slide.jpg" alt="" class="imgLateral top">
-  </div>
-  <div class="divtop">
-    <img src="../../../assets/img01Slide.jpg" alt="" class="imgLateral top">
+  <div class="divtop" *ngFor="let noticia of ntcUltima" style="background-image: url({{noticia.caminhoImagem}}); background-size: cover;">
+    <p class="paragrafo">{{noticia.titulo}}
+    </p>
+    <p class="subtitulo">{{noticia.subtitulo}}
+    </p>
+    <!-- <img src="../../../assets/img01Slide.jpg" alt="" class="imgLateral top" /> -->
   </div>
 </div>

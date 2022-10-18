@@ -1,5 +1,10 @@
 .dlex{
   display: flex;
+  height: 200px;
+}
+.divtop{
+  border-radius: 15px;
+  width: 100%;
 }
 .imgLateral{
   height: 200px;
@@ -10,7 +15,23 @@
   padding-top: 20px;
   padding-bottom: 20px; */
 }
-
+.paragrafo{
+  font-family: 'texto';
+  font-size:1.05rem;
+  letter-spacing: 0,05em;
+  color: #fff;
+  margin-top: 150px;
+  margin-left: 40px;
+  /* background-color: red; */
+}
+.subtitulo{
+  font-family: 'texto';
+  font-size:0.75rem;
+  letter-spacing: 0,05em;
+  color: #fff;
+  /* margin-top: 7px; */
+  margin-left: 40px;
+}
 div{
   width: 100%;
   /* margin-top: 20px; */
@@ -19,3 +40,4 @@ div{
 .divtop{
   margin-left: 20px;
 }
+

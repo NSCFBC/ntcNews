@@ -12,7 +12,10 @@
   color: azure;
   /* padding-left: 20px; */
   z-index: 111;
-  margin-left: 20px;
+  margin-left: 40px;
+  margin-top: 300px;
+  font-family: 'texto';
+  font-size:1.05rem;
   /* margin-top: 300px !important; */
 }
 .imgSlide{

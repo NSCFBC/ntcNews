@@ -1,10 +1,10 @@
 
 
 
-<div>
-  <img src="../../../assets/img01Slide.jpg" alt="" class="imgLateral top">
-</div>
-<div class="divtop">
-  <img src="../../../assets/img01Slide.jpg" alt="" class="imgLateral top">
+<div *ngFor="let noticia of ntcDestaque" style="background-image: url({{noticia.caminhoImagem}}); background-size: cover;" class="imgLateral">
+  <p class="paragrafo">{{noticia.titulo}}
+  </p>
+  <p class="subtitulo">{{noticia.subtitulo}}
+  </p>
 </div>
 

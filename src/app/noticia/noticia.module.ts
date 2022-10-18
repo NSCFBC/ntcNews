@@ -13,7 +13,8 @@ import { ListNoticiaComponent } from './list-noticia/list-noticia.component';
 import { TabelaNoticiaComponent } from './tabela-noticia/tabela-noticia.component';
 
 import { NgxSmartModalModule } from 'ngx-smart-modal';
-import {TableModule} from 'primeng/table';
+import { TableModule } from 'primeng/table';
+
 import { NoticiaService } from '../servico/noticia.service';
 @NgModule({
   declarations: [

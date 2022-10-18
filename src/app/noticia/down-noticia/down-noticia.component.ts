@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Noticia } from 'src/app/model/noticia';
 
 @Component({
   selector: 'app-down-noticia',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./down-noticia.component.css']
 })
 export class DownNoticiaComponent implements OnInit {
+
+  @Input() ntcUltima: Noticia[] = [];
 
   constructor() { }
 
