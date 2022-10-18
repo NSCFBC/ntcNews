@@ -1,13 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { NoticiaService } from 'src/app/servico/noticia.service';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Noticia } from 'src/app/model/noticia';
 
 @Component({
   selector: 'app-noticia-lazy',
   templateUrl: './noticia-lazy.component.html',
   styleUrls: ['./noticia-lazy.component.css']
 })
-export class NoticiaLazyComponent implements OnInit {
+export class NoticiaLazyComponent implements OnInit, AfterViewInit {
+  noticias: any;
+  ngAfterViewInit(): void {
+    this.noticiaService.findUltimasNtc().subscribe({
+      next: (data) => {
+        this.noticias = (data.content);
+      }
+    });
+  }
 
-  constructor() { }
+
+
+  constructor(private noticiaService: NoticiaService) { }
 
   ngOnInit(): void {
   }

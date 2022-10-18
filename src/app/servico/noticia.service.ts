@@ -16,5 +16,8 @@ export class NoticiaService {
     return this.http.get(BaseServidor.noticias);
   }
 
+  findUltimasNtc(): Observable<any> {
+    return this.http.get(BaseServidor.topUltimaDez);
+  }
 
 }

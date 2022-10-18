@@ -6,14 +6,14 @@
 }
 
 .carrousel{
-  background-color: red;
+  /* background-color: red; */
   height: 400px;
 }
-.lt-nees{
+/* .lt-nees{
   background-color:rebeccapurple;
-}
+} */
 .nt-news{
-  background-color: tomato;
+  /* background-color: tomato; */
   /* margin-left : 0; */
   margin-top: 10px;
 }
@@ -23,11 +23,11 @@
 } */
 
 .ft-news{
-  background-color: #caa;
+  /* background-color: #caa; */
   height: 200px;
 }
 .ft-news1{
-  background-color: #ffa;
+  /* background-color: #ffa; */
   height: 150px;
 
 }

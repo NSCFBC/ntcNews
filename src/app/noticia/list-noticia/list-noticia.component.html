@@ -1,8 +1,8 @@
 
 
-<h1 class="titulo keyLeftRight" >Destaques </h1>
-<ul *ngFor="let noticia of destaque let i = index" [attr.data-index]="i" class="keyLeftRight">
-  <li class="grid mgDestaque">
+<h1 class="titulo " >Últimas </h1>
+<ul  >
+  <li *ngFor="let noticia of recebenoticias let i = index" [attr.data-index]="i" class="grid mgDestaque">
     <span class="col-12 md:col-6 lg:col-2 nmrDestaque sombraGeneric">{{i+1}}</span>
     <div class="col-12 md:col-6 lg:col-10 mgContent">
       <h3 class="paragrafo">{{noticia.titulo}}</h3>

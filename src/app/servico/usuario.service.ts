@@ -1,3 +1,4 @@
+import { Usuario } from './../model/usuario';
 import {
   HttpClient,
   HttpErrorResponse,
@@ -5,7 +6,7 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BaseServidor } from '../constante/base-servidor';
-import { Usuario } from '../model/usuario';
+
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
@@ -17,7 +18,25 @@ export class UsuarioService {
     private http: HttpClient,
     private toastr: ToastrService,
     private router: Router
-  ) {}
+  ) { }
+
+  cadastrar(usuario: Usuario) {
+    return this.http.post(BaseServidor.usuarios, JSON.parse(JSON.stringify(usuario))).subscribe({
+      next: (data) => data,
+      error: (error) => {
+        let toast = this.toastr.error(
+          'Erro ao realizar cadastro!!',
+          'Erro',
+          {
+            timeOut: 1500,
+            extendedTimeOut: 1000,
+            closeButton: true,
+            progressBar: true,
+          }
+        );
+      }
+   });
+  }
 
   usuarioLogado(): boolean {
     return localStorage.getItem("token") != null ? true : false;

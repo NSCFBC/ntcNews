@@ -1,6 +1,8 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSmartModalComponent, NgxSmartModalService } from 'ngx-smart-modal';
 import { MenuItem } from 'primeng/api';
+import { UsuarioService } from '../servico/usuario.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,9 +10,21 @@ import { MenuItem } from 'primeng/api';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  constructor(public ngxSmartModalService: NgxSmartModalService) {}
+  constructor(
+    public ngxSmartModalService: NgxSmartModalService,
+    private loginServiceService: UsuarioService,
+    private router: Router
+  ) {}
 
   items: MenuItem[] = [];
+
+  logout() {
+    localStorage.clear();
+
+    // this.display = false;
+    // this.router.navigateByUrl("");
+    this.router.navigate(['']);
+  }
 
   ngOnInit() {
     this.items = [
@@ -49,6 +63,7 @@ export class NavComponent implements OnInit {
       {
         label: 'Usuário',
         icon: 'pi pi-fw pi-user',
+        visible: this.loginServiceService.usuarioLogado(),
         items: [
           {
             label: 'Pesquisar',
@@ -71,6 +86,7 @@ export class NavComponent implements OnInit {
       {
         label: 'Noticia',
         icon: 'pi pi-fw pi-file',
+        visible: this.loginServiceService.usuarioLogado(),
         items: [
           {
             label: 'Adicionar',
@@ -88,6 +104,7 @@ export class NavComponent implements OnInit {
       {
         label: 'Cadastrar-se',
         icon: 'pi pi-fw pi-file',
+        visible: !this.loginServiceService.usuarioLogado(),
         command: () => {
           this.ngxSmartModalService.getModal('modalCadastro').open();
         },
@@ -95,6 +112,7 @@ export class NavComponent implements OnInit {
       {
         label: 'Entrar',
         icon: 'pi pi-fw pi-user',
+        visible: !this.loginServiceService.usuarioLogado(),
         command: () => {
           this.ngxSmartModalService.getModal('modalEntrar').open();
         },
@@ -103,6 +121,14 @@ export class NavComponent implements OnInit {
         label: 'Sair',
         icon: 'pi pi-fw pi-sign-out',
         routerLink: '/home',
+        visible: this.loginServiceService.usuarioLogado(),
+        routerLinkActiveOptions: true,
+        command: (event) => {
+          this.logout();
+          this.router.navigate(['/home']).then(() => {
+            window.location.reload();
+          });
+        },
       },
     ];
   }

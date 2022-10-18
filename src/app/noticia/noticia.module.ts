@@ -14,6 +14,7 @@ import { TabelaNoticiaComponent } from './tabela-noticia/tabela-noticia.componen
 
 import { NgxSmartModalModule } from 'ngx-smart-modal';
 import {TableModule} from 'primeng/table';
+import { NoticiaService } from '../servico/noticia.service';
 @NgModule({
   declarations: [
     RoutingComponent,
@@ -32,6 +33,7 @@ import {TableModule} from 'primeng/table';
     NoticiaRoutingModule
   ],
   exports: [
-  ]
+  ],
+  providers: [NoticiaService]
 })
 export class NoticiaModule { }
