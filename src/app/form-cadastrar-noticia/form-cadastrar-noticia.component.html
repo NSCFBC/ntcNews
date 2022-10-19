@@ -1,0 +1,16 @@
+
+<ngx-smart-modal #videoModal identifier="modalCadastroNoticia" customClass="medium-modal nsm-dialog-animation-ltr nsm-centered">
+  <form class="formModal" (ngSubmit)="cadastro()" [formGroup]="cadNoticiaGroup">
+      <h1>Cadastrar Notícia</h1>
+      <div class="ctnCadastro">
+        <label for="titulo" class="lbCadastro tituloParagrafoReduzidoLabel">titulo</label>
+        <input type="text" id="titulo" name="titulo" pInputText class="inputConfig" formControlName="titulo" />
+        <label for="subtitulo" class="lbCadastro tituloParagrafoReduzidoLabel">subtitulo</label>
+        <input type="text" id="subtitulo" name="subtitulo" pInputText class="inputConfig" formControlName="subtitulo" />
+        <label for="conteudo" class="lbCadastro tituloParagrafoReduzidoLabel">conteudo</label>
+        <input type="password"  id="conteudo" name="conteudo" pPassword class="inputConfig" formControlName="conteudo" />
+        <button pButton  (click)="videoModal.close()" label="Entrar" class="p-button-raised"  type="submit">Cadastrar</button>
+      </div>
+  </form>
+  </ngx-smart-modal>
+

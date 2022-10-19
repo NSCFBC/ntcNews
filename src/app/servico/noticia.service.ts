@@ -10,6 +10,10 @@ import { Noticia } from '../model/noticia';
 })
 export class NoticiaService {
 
+  cadastrar(noticia: Noticia) {
+    return this.http.post(BaseServidor.noticias, noticia);
+  }
+
   constructor(private http: HttpClient) {
   }
   findAll(): Observable<any> {

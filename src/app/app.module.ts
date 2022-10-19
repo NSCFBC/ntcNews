@@ -22,12 +22,14 @@ import { FormEntrarComponent } from './form-entrar/form-entrar.component';
 import { NoticiaModule } from './noticia/noticia.module';
 import { FormCadastrarComponent } from './form-cadastrar/form-cadastrar.component';
 import { HttpInterceptorModule } from './interceptor/header-interceptor.service';
+import { FormCadastrarNoticiaComponent } from './form-cadastrar-noticia/form-cadastrar-noticia.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     FormEntrarComponent,
-    FormCadastrarComponent
+    FormCadastrarComponent,
+    FormCadastrarNoticiaComponent
   ],
   imports: [
     HttpInterceptorModule,

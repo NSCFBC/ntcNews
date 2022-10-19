@@ -91,6 +91,9 @@ export class NavComponent implements OnInit {
           {
             label: 'Adicionar',
             icon: 'pi pi-fw pi-book',
+            command: () => {
+              this.ngxSmartModalService.getModal('modalCadastroNoticia').open();
+            },
           },
           {
             label: 'Pesquisar',
