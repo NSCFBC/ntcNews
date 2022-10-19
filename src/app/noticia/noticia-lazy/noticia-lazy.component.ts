@@ -11,6 +11,7 @@ export class NoticiaLazyComponent implements OnInit, AfterViewInit {
   noticias: any;
   noticiaDown: Noticia[] = [];
   ntcDestaq: Noticia[] = [];
+  ntcList: Noticia[] = [];
 
   ngAfterViewInit(): void {
     this.noticiaService.findUltimasNtc().subscribe({
@@ -21,6 +22,13 @@ export class NoticiaLazyComponent implements OnInit, AfterViewInit {
         this.ntcDestaq.push(this.noticias[0]);
         this.ntcDestaq.push(this.noticias[1]);
 
+        this.ntcList.push(this.noticias[0]);
+        this.ntcList.push(this.noticias[1]);
+        this.ntcList.push(this.noticias[2]);
+        this.ntcList.push(this.noticias[3]);
+        this.ntcList.push(this.noticias[4]);
+        this.ntcList.push(this.noticias[5]);
+        this.ntcList.push(this.noticias[6]);
       }
     });
 

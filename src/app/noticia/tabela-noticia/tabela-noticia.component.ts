@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Noticia } from 'src/app/model/noticia';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgxSmartModalService } from 'ngx-smart-modal';
 
 @Component({
@@ -8,10 +9,8 @@ import { NgxSmartModalService } from 'ngx-smart-modal';
 })
 export class TabelaNoticiaComponent implements OnInit {
 
-  noticias: any;
-  noticia: any = [];
-  showStandard: boolean = false;
-  display: boolean = false;
+  @Input() noticias: Noticia[] = [];
+
 
   constructor(public ngxSmartModalService: NgxSmartModalService) { }
   ngAfterViewInit(): void {
@@ -22,45 +21,44 @@ export class TabelaNoticiaComponent implements OnInit {
       // console.log("dados carregados");
     // });
   }
-  showDialog(noticia : any) {
-    // this.display = !this.display;
-    this.noticia = noticia;
-    this.noticia.nomeCat = this.noticia.categoria.nome;
-    // console.log("sjdsaipd");
-    // console.log(this.noticia.categoria.nome);
-  }
+  // showDialog(noticia : any) {
+  //   // this.display = !this.display;
+  //   this.noticia = noticia;
+  //   this.noticia.nomeCat = this.noticia.categoria.nome;
+  //   // console.log("sjdsaipd");
+  //   // console.log(this.noticia.categoria.nome);
+  // }
 
   ngOnInit(): void {
-    this.display = false;
-    this.noticias = [
-      {
-        caminhoImagem: 'ads',
-        dataNoticia: '2010/10/10',
-        titulo: 'asdasdasdasdas',
-        subtitulo: 'asd',
-        conteudo: 'adads',
-      },
-      {
-        caminhoImagem: 'ads',
-        dataNoticia: '2010/10/10',
-        titulo: 'asdasdasdasdas',
-        subtitulo: 'asd',
-        conteudo: 'adads',
-      },
-      {
-        caminhoImagem: 'ads',
-        dataNoticia: '2010/10/10',
-        titulo: 'asdasdasdasdas',
-        subtitulo: 'asd',
-        conteudo: 'adads',
-      }, {
-        caminhoImagem: 'ads',
-        dataNoticia: '2010/10/10',
-        titulo: 'asdasdasdasdas',
-        subtitulo: 'asd',
-        conteudo: 'adads',
-      }
-    ];
+    // this.noticias = [
+    //   {
+    //     caminhoImagem: 'ads',
+    //     dataNoticia: '2010/10/10',
+    //     titulo: 'asdasdasdasdas',
+    //     subtitulo: 'asd',
+    //     conteudo: 'adads',
+    //   },
+    //   {
+    //     caminhoImagem: 'ads',
+    //     dataNoticia: '2010/10/10',
+    //     titulo: 'asdasdasdasdas',
+    //     subtitulo: 'asd',
+    //     conteudo: 'adads',
+    //   },
+    //   {
+    //     caminhoImagem: 'ads',
+    //     dataNoticia: '2010/10/10',
+    //     titulo: 'asdasdasdasdas',
+    //     subtitulo: 'asd',
+    //     conteudo: 'adads',
+    //   }, {
+    //     caminhoImagem: 'ads',
+    //     dataNoticia: '2010/10/10',
+    //     titulo: 'asdasdasdasdas',
+    //     subtitulo: 'asd',
+    //     conteudo: 'adads',
+    //   }
+    // ];
   }
 
 }
